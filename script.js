@@ -1,14 +1,18 @@
 const container = document.querySelector('#container')
-for (let i = 0; i < 16; i ++) {
+
+function addSquares(num) {
+const squares = parseInt(num)
+for (let i = 0; i < squares; i ++) {
     let row = document.createElement("div"); 
         row.className = "row";
         container.appendChild(row);
         
-    for (let j=0; j <16; j++) { 
+    for (let j=0; j < squares; j++) { 
    let box = document.createElement("div");
         box.className = "box";
         row.appendChild(box);
     }
+}
 }
 
 function addGreen() {
@@ -21,24 +25,20 @@ function addGreen() {
     }
     
 
-document.addEventListener('DOMContentLoaded', addGreen() )
+document.addEventListener('DOMContentLoaded', addSquares(16), addGreen() )
 
 function createNewBoard() {
-    let boxAmnt = prompt("How many boxes would you like to make up the etch-a-sketch?");
+   
+    let boxAmnt = prompt("How many boxes would you like to make up the etch-a-sketch? Maximum number is 100");
+
     console.log("box amount", boxAmnt);
-    const num = parseInt()
-    container.innerHTML = "";
-    for (let i = 0; i < boxAmnt; i ++) {
-        let row = document.createElement("div"); 
-            row.className = "row";
-            container.appendChild(row);
-            
-        for (let j=0; j < boxAmnt; j++) { 
-       let box = document.createElement("div");
-            box.className = "box";
-            row.appendChild(box);
+    let num = parseInt(boxAmnt)
+    while (num > 100) 
+        { boxAmnt = prompt("Please enter 100 or less");
+            num = parseInt(boxAmnt);
         }
-    }
+    container.innerHTML = "";
+    addSquares(num)
     addGreen()
 }  
 

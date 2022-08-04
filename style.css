@@ -34,11 +34,13 @@ button {
     background-color: lightgrey;
     height: 30px;
     width:30px;
+    border: 1px solid black;
 }
 
 .green {
     display: flex;
-    background-color: lime !important;
+    background-color: aquamarine !important;
     height: 30px;
     width:30px;
+    border: 1px solid black;
 }
