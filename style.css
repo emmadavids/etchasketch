@@ -32,13 +32,13 @@ button {
 .box {
     display:flex;
     background-color: lightgrey;
-    height: 60px;
-    width:60px;
+    height: 30px;
+    width:30px;
 }
 
 .green {
     display: flex;
     background-color: lime !important;
-    height: 60px;
-    width:60px;
+    height: 30px;
+    width:30px;
 }
